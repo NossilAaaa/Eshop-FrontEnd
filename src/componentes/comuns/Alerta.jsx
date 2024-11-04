@@ -1,26 +1,25 @@
 import { useState, useEffect } from "react";
 import { Alert } from "react-bootstrap";
 
-const Alert = ({alerta}) => {
+const Alerta = ({alerta}) => {
     const [exibir, setExibir] = useState(false);
 
-    useEffect(() => {
+    useEffect(()=>{
         setExibir(true);
-        setTimeout(() => {
+        setTimeout(()=>{
             setExibir(false);
-        }, 2000);
-    }, [alerta]);
+        },2000);
+    },[alerta]);
 
     return (
-        <div>
-            {(alerta.message.length > 0 && exibir) &&
-                <Alert variant={alerta.status === 'error' ? 'danger' : 'primary' }>
+        <>
+            { (alerta.message.length > 0 && exibir) &&
+                <Alert variant={alerta.status === 'error' ? 'danger' : 'primary'}>
                     {alerta.message}
                 </Alert>
             }
-        </div>
+        </>
     )
-
 }
 
-export default Alert;
+export default Alerta;

@@ -9,11 +9,11 @@ function Menu() {
         <div>
             <Navbar expand="lg" className="bg-body-tertiary">
                 <Container>
-                    <NavLink className="navbar-brand" aria-current="page" exact="true" to="/">eShop</NavLink>
+                    <NavLink className="navbar-brand"exact="true" to="/">eShop</NavLink>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <NavLink className="nav-link active" aria-current="page" exact="true" to="/">Home</NavLink>
+                            <NavLink className="nav-link active" exact="true" to="/">Home</NavLink>
                             <NavDropdown title="Manutenções" id="basic-nav-dropdown">
                                 <NavLink className="dropdown-item" exact="true" to="categorias">Categorias</NavLink>
                                 <NavLink className="dropdown-item" exact="true" to="produtos">Produtos</NavLink>
